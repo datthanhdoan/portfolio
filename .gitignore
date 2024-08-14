@@ -3,9 +3,9 @@
 # output
 public
 
-# themes
-# themes/*
-# !themes/.gitkeep
+themes
+themes/*
+!themes/.gitkeep
 
 # hugo
 resources
