@@ -1,4 +1,4 @@
-baseURL = "https://g1en.site"
+baseURL = "https://datthanhdoan.github.io/portfolio/"
 defaultContentLanguage = "vn"
 languageCode = "vn-VN"
 title = "DoanThanhDat"
@@ -36,7 +36,7 @@ darkTheme = "forest"
 images = ["me/background.jpg"]
 
 author = "datthanhdoan"
-description = "The life record of g1eny0ung is presented here."
+description = ""
 avatar = "me/me.png"
 headerTitle = "Đoàn Thành Đạt"
 motto = "Unity Game Developer"
