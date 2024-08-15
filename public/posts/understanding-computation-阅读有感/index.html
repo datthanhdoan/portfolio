@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="vn-VN"
+  x-data
+  :class="$store.darkMode.class()"
+  :data-theme="$store.darkMode.theme()">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Understanding Computation 阅读有感 | DoanThanhDat</title>
+
+    
+<link href="/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+
+
+
+
+<meta name="author" content="g1eny0ung" />
+<meta name="description" content="Understanding Computation: From Simple Machines to Impossible Programs.
+" />
+
+
+<link rel="canonical" href="http://localhost:1313/posts/understanding-computation-%E9%98%85%E8%AF%BB%E6%9C%89%E6%84%9F/" />
+
+
+<meta property="og:url" content="http://localhost:1313/posts/understanding-computation-%E9%98%85%E8%AF%BB%E6%9C%89%E6%84%9F/">
+  <meta property="og:site_name" content="DoanThanhDat">
+  <meta property="og:title" content="Understanding Computation 阅读有感">
+  <meta property="og:description" content="Understanding Computation: From Simple Machines to Impossible Programs.">
+  <meta property="og:locale" content="vn_VN">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2018-01-09T14:00:11+08:00">
+    <meta property="article:modified_time" content="2018-01-09T14:00:11+08:00">
+    <meta property="article:tag" content="感悟">
+    <meta property="article:tag" content="Ruby Lang">
+    <meta property="og:image" content="http://localhost:1313/posts/understanding-computation-%E9%98%85%E8%AF%BB%E6%9C%89%E6%84%9F/Understanding-Computation.jpg">
+
+
+
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="http://localhost:1313/posts/understanding-computation-%E9%98%85%E8%AF%BB%E6%9C%89%E6%84%9F/Understanding-Computation.jpg">
+  <meta name="twitter:title" content="Understanding Computation 阅读有感">
+  <meta name="twitter:description" content="Understanding Computation: From Simple Machines to Impossible Programs.">
+
+
+
+<meta name="generator" content="Hugo 0.127.0">
+
+<link rel="stylesheet" href="/css/output.css" />
+
+<style>
+
+
+
+</style>
+
+
+    
+
+
+<link rel="stylesheet" data-custom-syntax-highlighting />
+<style>
+  .chroma {
+    padding: 1em;
+    background-color: var(--dream-pre-bg, #f5f5f5);
+    border-radius: .5em;
+    overflow: auto;
+  }
+
+  html.dark .chroma {
+    background-color: var(--dream-pre-bg-dark, #262626);
+  }
+</style>
+
+
+
+
+
+
+    
+    <link rel="stylesheet" href="/css/custom.css" />
+    
+
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+  </head>
+
+  <body x-data="{
+    flip: false,
+  }">
+    
+    <div id="dream-global-bg"></div>
+
+    
+<nav x-data="{ isSticky: false }"
+  x-init="window.addEventListener('scroll', () => { isSticky = window.scrollY > 30 })"
+  class="sticky top-0 z-30 mt-4 lg:mt-8 py-4"
+  :class="{ 'bg-base-100 shadow-lg dark:border-b dark:border-base-content/30': isSticky }">
+
+  <div class="container flex justify-between px-4">
+    <section class="flex items-center gap-4">
+      <div class="avatar cursor-pointer hover:online" @click="flip = !flip" title="">
+        <div class="h-10 rounded-full">
+          <img src="/me/me.png" alt="Đoàn Thành Đạt" />
+        </div>
+      </div>
+
+      
+      <div>
+        
+        <a href="http://localhost:1313/" class="text-lg font-semibold cursor-pointer">
+          Đoàn Thành Đạt
+        </a>
+        
+        
+        <div class="text-base-content/60 text-sm">Unity Game Developer</div>
+        
+      </div>
+      
+    </section>
+
+    <div class="dropdown dropdown-end sm:hidden">
+      <div tabindex="0" role="button" class="btn btn-ghost btn-square" aria-label="Select an option">
+        <ion-icon name="menu" class="text-2xl"></ion-icon>
+      </div>
+      <ul class="dropdown-content menu w-36 bg-base-100 rounded-box z-[1] shadow-md">
+        
+
+
+<li>
+  <div role="link" tabindex="0" class="inline-flex items-center p-2 cursor-pointer" @click="flip = !flip" title="">
+    <ion-icon name="information-circle"></ion-icon></div>
+</li>
+
+
+
+
+
+
+
+
+
+<li>
+  <a class="group inline-flex items-center p-2 cursor-pointer" href="/search" title="">
+    <ion-icon name="search"></ion-icon>
+    
+  </a>
+</li>
+
+
+
+
+
+
+
+<li>
+  <a class="inline-flex items-center p-2 cursor-pointer" href="https://github.com/datthanhdoan" target="_blank" title="GitHub">
+    
+    <ion-icon name="logo-github"></ion-icon>
+    
+    GitHub
+  </a>
+</li>
+
+
+
+
+
+<li>
+  <a class="inline-flex items-center p-2 cursor-pointer" href="/posts" title="">
+    <ion-icon name="archive"></ion-icon>
+    
+  </a>
+</li>
+
+
+
+
+<li>
+  <a class="inline-flex items-center p-2 cursor-pointer" href="/categories" title="">
+    <ion-icon name="grid"></ion-icon>
+    
+  </a>
+</li>
+
+
+
+
+<li>
+  <a class="inline-flex items-center p-2 cursor-pointer" href="/tags" title="">
+    <ion-icon name="pricetags"></ion-icon>
+    
+  </a>
+</li>
+
+
+
+
+<li>
+  <a class="inline-flex items-center p-2 cursor-pointer" href="/index.xml" title="RSS">
+    <ion-icon name="logo-rss"></ion-icon>
+    RSS
+  </a>
+</li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </ul>
+    </div>
+    <section class="hidden sm:flex sm:items-center sm:gap-2 md:gap-4">
+      
+      
+      
+      <div role="link" tabindex="0" class="text-sm font-semibold cursor-pointer hover:underline" @click="flip = !flip" title=""></div>
+      
+      
+
+      
+      
+      
+      
+
+      
+
+      
+      
+      
+      
+<a class="group inline-flex items-center p-2 rounded-full cursor-pointer hover:bg-primary" href="/search" title="">
+  <ion-icon class="group-hover:text-primary-content" name="search"></ion-icon>
+</a>
+
+
+      
+      
+
+
+
+  
+  <a class="group inline-flex items-center p-2 rounded-full cursor-pointer hover:bg-primary" href="https://github.com/datthanhdoan" target="_blank" title="GitHub">
+    <ion-icon class="group-hover:text-primary-content" name="logo-github"></ion-icon>
+  </a>
+  
+
+
+
+      
+
+      <div class="dropdown dropdown-end dropdown-hover">
+        <div tabindex="0" role="button" class="group inline-flex items-center p-2 rounded-full cursor-pointer hover:bg-primary" aria-label="Select an option">
+          <ion-icon class="group-hover:text-primary-content text-xl" name="menu"></ion-icon>
+        </div>
+        <ul class="dropdown-content menu w-36 bg-base-100 rounded-box z-[1] shadow-xl">
+          
+          
+<li>
+  <a class="inline-flex items-center p-2 cursor-pointer" href="/posts" title="">
+    <ion-icon name="archive"></ion-icon>
+    
+  </a>
+</li>
+
+
+          
+          
+<li>
+  <a class="inline-flex items-center p-2 cursor-pointer" href="/categories" title="">
+    <ion-icon name="grid"></ion-icon>
+    
+  </a>
+</li>
+
+
+          
+          
+<li>
+  <a class="inline-flex items-center p-2 cursor-pointer" href="/tags" title="">
+    <ion-icon name="pricetags"></ion-icon>
+    
+  </a>
+</li>
+
+
+          
+          
+<li>
+  <a class="inline-flex items-center p-2 cursor-pointer" href="/index.xml" title="RSS">
+    <ion-icon name="logo-rss"></ion-icon>
+    RSS
+  </a>
+</li>
+
+
+          
+
+          
+          
+
+
+
+
+
+
+
+
+
+
+          
+        </ul>
+      </div>
+      
+    </section>
+  </div>
+</nav>
+
+
+    <div class="flip-container" :class="{ 'flip-it': flip }">
+      <div class="flipper">
+        <div class="front">
+          <div class="container">
+            
+<div class="mt-4 px-4">
+  
+  <div class="relative" x-data="{ height: '' }" x-init="height = $el.scrollHeight + 'px'">
+  
+    
+    <div class="absolute right-0 lg:w-36 xl:w-48 hidden lg:block" :style="{ height }">
+      <nav id="TableOfContents"></nav>
+    </div>
+    
+    <article class="mx-auto prose dark:prose-invert" id="dream-single-post-main">
+      <header>
+        <h1>Understanding Computation 阅读有感</h1>
+        <p class="text-sm">
+          
+            <span data-format="luxon">2018-01-09T14:00:11&#43;08:00</span>
+          
+
+          | <span>2</span>
+
+          
+          | <span>
+            
+              <span data-format="luxon">2018-01-09T14:00:11&#43;08:00</span>
+            </span>
+          
+        </p>
+        <div class="flex justify-between">
+          <div class="flex items-center">
+  
+  <div class="avatar mr-1">
+    <div class="w-8 rounded-full">
+      <img class="my-0" src="/me/yy.jpg" alt="g1eny0ung" />
+    </div>
+  </div>
+  
+
+  <span>
+  
+    
+      g1eny0ung
+    
+  
+  </span>
+</div>
+
+
+          <span class="flex items-center gap-2">
+  <a class="group inline-flex items-center p-2 text-sm rounded-full cursor-pointer hover:bg-primary" href="https://twitter.com/intent/tweet?text=Understanding%20Computation%20%e9%98%85%e8%af%bb%e6%9c%89%e6%84%9f&url=http%3a%2f%2flocalhost%3a1313%2fposts%2funderstanding-computation-%25E9%2598%2585%25E8%25AF%25BB%25E6%259C%2589%25E6%2584%259F%2f" title="Share on X">
+    <ion-icon class="group-hover:text-primary-content" name="logo-x"></ion-icon>
+  </a>
+  <a class="group inline-flex items-center p-2 rounded-full cursor-pointer hover:bg-primary" href="https://facebook.com/sharer/sharer.php?u=http%3a%2f%2flocalhost%3a1313%2fposts%2funderstanding-computation-%25E9%2598%2585%25E8%25AF%25BB%25E6%259C%2589%25E6%2584%259F%2f" title="Share on Facebook">
+    <ion-icon class="group-hover:text-primary-content" name="logo-facebook"></ion-icon>
+  </a>
+</span>
+
+        </div>
+      </header>
+
+      
+      <img src="Understanding-Computation.jpg" alt="Understanding Computation 阅读有感" />
+      
+
+      <p>Understanding Computation: From Simple Machines to Impossible Programs.</p>
+<p>这本书的简介：<a href="https://book.douban.com/subject/26148763/">《计算的本质：深入剖析程序和计算机》</a></p>
+<p>首先给它评一下分，<strong>5 星推荐</strong>，书的整体是比较通俗易懂的，深浅得当，对了解计算理论非常有帮助。
+作者的行文十分流畅，但是个人感觉有的地方没有能够进行更加深入的探讨，只是浅浅的带过，可能是涉及的理论有些复杂，不是很符合本书的意图吧。</p>
+<p>对于本书的总结，我想借鉴一下本书的后记，因为我不觉得我能比这总结的更好。同时即便你没有读过此书，我想也能通过后记产生或多或少的感想。
+我是第二遍读这本书了，第一遍在闲杂时间随便翻了翻，第二遍精读了一下，收获颇丰。</p>
+<p>以下是书的后记，我略微删减了一些：</p>
+<ul>
+<li>任何人都可以设计和实现一种编程语言。语法和语义的基本思想是简单的。</li>
+<li>每一个计算机程序都是一个数学对象。按句法来说，一个程序只是一个大数；语义上来说，它可能代表一个数学函数，或者一个能被形式化规约规则操纵的分层结构。这意味着数学上的许多技术和成果，如 Kleene 规约理论或者 Gödel 不完备定理，都能等价地应用到程序上。</li>
+<li>计算，最初被描述为只是“一台计算机做的事”，已经被证明是某种自然力量。很容易把计算想象为一个复杂的人类发明，它只能由对许多复杂部分进行特殊设计的系统来执行，但在系统中还可以看到支持它没那么复杂。因此，计算不是一个枯燥的只是发生在微处理器中的人工过程，而是一个在许多不同地点以不同方式发生的普遍现象。</li>
+<li>计算不是全有或全无的。不同的机器拥有不同的计算能力，这给了我们用途上的连续性：DFA 和 NFA 有有限的能力，DPDA 更强大，NPDA 还更强大，而图灵机是我们知道的最强大的机器。</li>
+<li>抽象的编码和级别对于利用计算能力必不可少。计算机是维护抽象宝塔的机器，从非常低层次的半导体物理学开始，上升到层次高得多的多点触控图形用户界面。为了让计算有用，我们需要能把现实世界中复杂的思想编码成机器能处理的更简单的形式，然后再把结果解码回有意义的高层表示。</li>
+<li>计算能做的事情是有限制的。我们不知道如何构建比图灵机能力更强的机器，但确实存在图灵机无法解决的问题，而这些问题包括发现我们所写程序的信息。可以利用模糊的或者不完整的答案处理这些限制，以便质疑我们程序的行为。</li>
+</ul>
+<p>其实学习这些理论并不会立即看到效果，就像书中说的那样：</p>
+<blockquote>
+<p><strong>这些思想可能不会立即改变你工作的方式，但我希望它们已经满足了你的某种好奇心，并且能帮助你享受在宇宙中实现计算时所度过的时光。</strong></p>
+</blockquote>
+
+      
+      <div class="divider"></div>
+      <div class="flex flex-col md:flex-row justify-between gap-4 py-4">
+        
+        <a class="group btn btn-outline" href="/posts/%E7%99%BD%E9%A9%AC/" title="白马">
+          <ion-icon name="chevron-back"></ion-icon>
+          <div class="inline-flex flex-col items-start">
+            <span class="text-base-content/60 group-hover:text-neutral-content/60 text-xs font-normal"></span>
+            <span class="max-w-48 truncate">白马</span>
+          </div>
+        </a>
+        
+
+        
+        <div></div>
+        
+      </div>
+      
+    </article>
+  </div>
+
+  
+
+  
+  <div class="divider max-w-[65ch] mx-auto"></div>
+  
+
+  <section class="max-w-[65ch] mx-auto space-y-4">
+    
+
+    
+    <template x-if="['localhost', '127.0.0.1'].indexOf(window.location.hostname) == -1">
+      <article>
+        <script
+          src="https://utteranc.es/client.js"
+          repo="datthanhdoan/datthanhdoan.github.io"
+          issue-term="og:title"
+          theme="github-light"
+          crossorigin="anonymous"
+          async>
+        </script>
+      </article>
+    </template>
+    
+
+    
+  </section>
+</div>
+
+
+            <footer class="flex justify-between items-center gap-2 px-4 py-12">
+              <div>
+  
+  <p>
+    © 2024 DoanThanhDat
+  </p>
+  
+
+  
+  <p class="text-sm">
+    🌱
+    <span class="text-base-content/60">
+      Powered by <a class="hover:underline" href="https://gohugo.io/" target="_blank">Hugo</a> with theme
+      <a class="hover:underline" href="https://github.com/g1eny0ung/hugo-theme-dream" target="_blank">Dream</a>.</span
+    >
+  </p>
+  
+</div>
+
+              <div
+  x-data="{ icons: [
+    { name: 'moon', status: 'y' },
+    { name: 'sunny', status: 'n' },
+    { name: 'desktop', status: 'auto' }
+  ] }"
+  class="flex items-center h-[32px] px-2 gap-2 border border-base-300 rounded-full"
+>
+  <template x-for="icon in icons">
+    <div
+      role="button"
+      tabindex="0"
+      :aria-label="'Select ' + icon.name + ' mode'"
+      class="group inline-flex justify-center items-center p-1 rounded-full cursor-pointer hover:bg-primary"
+      :class="$store.darkMode.icon() === icon.name && 'bg-primary'"
+      @click="$store.darkMode.toggle(icon.status)"
+    >
+      <ion-icon
+        :name="`${icon.name}-outline`"
+        class="group-hover:text-primary-content"
+        :class="$store.darkMode.icon() === icon.name && 'text-primary-content'"
+      >
+      </ion-icon>
+    </div>
+  </template>
+</div>
+
+            </footer>
+          </div>
+        </div>
+        <div class="back">
+          <div class="container">
+            <div class="dream-grid">
+  
+  
+  
+  <div class="w-full md:w-1/2 lg:w-1/3 xl:w-1/4 p-4 dream-column">
+    <article
+      class="card card-compact bg-base-100 hover:bg-base-content/10 shadow-xl dark:border dark:border-base-content/30"
+    >
+      <div class="card-body">
+        <div class="card-title">Giới thiệu</div>
+
+        <div class="prose dark:prose-invert">
+          <p><strong>Xin chào 👋, mình là Đạt!</strong></p>
+<p>Mình là một game developer tự học, hiện đang làm phó chủ nhiệm của câu lạc bộ phát triển game trường Đại học Phenikaa. Đây là portfolio của mình, nơi mình showcase một số dự án mà mình đã tham gia và những kiến thức mà mình đã học được.</p>
+<pre tabindex="0"><code></code></pre>
+        </div>
+      </div>
+    </article>
+  </div>
+  
+  <div class="w-full md:w-1/2 lg:w-1/3 xl:w-1/4 p-4 dream-column">
+    <article
+      class="card card-compact bg-base-100 hover:bg-base-content/10 shadow-xl dark:border dark:border-base-content/30"
+    >
+      <div class="card-body">
+        <div class="card-title">Học Vấn</div>
+
+        <div class="prose dark:prose-invert">
+          <p>🎓<strong>Đại học Phenikaa</strong></br>
+Công nghệ thông tin</p>
+
+        </div>
+      </div>
+    </article>
+  </div>
+  
+  
+
+  
+  <div class="w-full md:w-1/2 lg:w-1/3 xl:w-1/4 p-4 dream-column">
+    <article
+      class="card card-compact bg-base-100 hover:bg-base-content/10 shadow-xl dark:border dark:border-base-content/30"
+    >
+      <div class="card-body">
+        <div class="card-title"></div>
+
+        <ul class="menu menu-horizontal flex-wrap w-full [&_ion-icon]:text-lg">
+  
+  <li>
+    <a href="mailto:datthanhdoan.charlie@gmail.com" title="Email">
+      <ion-icon name="mail"></ion-icon>
+    </a>
+  </li>
+  
+
+  
+  <li>
+    <a href="https://github.com/datthanhdoan" target="_blank" title="GitHub">
+      <ion-icon name="logo-github"></ion-icon>
+    </a>
+  </li>
+  
+</ul>
+
+      </div>
+    </article>
+  </div>
+  
+
+  
+  
+</div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+  window.lightTheme = "emerald"
+  window.darkTheme = "forest"
+
+  window.hasTwitterEmbed =  null 
+  if (window.hasTwitterEmbed) {
+    
+    window.twttr = (function (d, s, id) {
+      var js,
+        fjs = d.getElementsByTagName(s)[0],
+        t = window.twttr || {}
+      if (d.getElementById(id)) return t
+      js = d.createElement(s)
+      js.id = id
+      js.src = 'https://platform.twitter.com/widgets.js'
+      fjs.parentNode.insertBefore(js, fjs)
+
+      t._e = []
+      t.ready = function (f) {
+        t._e.push(f)
+      }
+
+      return t
+    })(document, 'script', 'twitter-wjs')
+  }
+</script>
+<script src="https://cdn.jsdelivr.net/npm/imagesloaded@5.0.0/imagesloaded.pkgd.min.js" integrity="sha256-htrLFfZJ6v5udOG+3kNLINIKh2gvoKqwEhHYfTTMICc=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha256-Nn1q/fx0H7SNLZMQ5Hw5JLaTRZp0yILA/FRexe19VdI=" crossorigin="anonymous"></script>
+<script src="/js/grid.js"></script>
+<script src="/js/main.js"></script>
+
+    
+
+
+<script
+  src="https://cdn.jsdelivr.net/npm/luxon@1.26.0"
+  integrity="sha256-4sbTzmCCW9LGrIh5OsN8V5Pfdad1F1MwhLAOyXKnsE0="
+  crossorigin="anonymous"
+></script>
+<script>
+  format()
+
+  function format() {
+    document.querySelectorAll('span[data-format="luxon"]').forEach(el => {
+      const date = el.textContent
+
+      el.textContent = luxon.DateTime.fromISO(date, { locale: "vn" }).toFormat("dd/MM/yyyy, cccc")
+    })
+  }
+</script>
+
+
+
+<script>
+  window.customSyntaxHighlighting = {
+    light: "/css/syntax-light.min.css",
+    dark: "/css/syntax-dark.min.css"
+  }
+
+  document.addEventListener('alpine:initialized', () => {
+    var isDark = Alpine.store('darkMode').isDark()
+    var customSyntaxHighlightingUrl = isDark ? window.customSyntaxHighlighting.dark : window.customSyntaxHighlighting.light
+
+    document
+      .querySelector('link[data-custom-syntax-highlighting]')
+      .setAttribute('href', customSyntaxHighlightingUrl)
+  })
+</script>
+
+
+
+
+    
+
+    
+
+    <script type="module" src="https://unpkg.com/ionicons@7.4.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.4.0/dist/ionicons/ionicons.js"></script>
+  </body>
+</html>

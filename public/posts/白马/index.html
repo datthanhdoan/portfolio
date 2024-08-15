@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html lang="vn-VN"
+  x-data
+  :class="$store.darkMode.class()"
+  :data-theme="$store.darkMode.theme()">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>白马 | DoanThanhDat</title>
+
+    
+<link href="/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+
+
+
+
+<meta name="author" content="g1eny0ung" />
+<meta name="description" content="如果你深深爱着的人，却深深的爱上了别人，有什么法子？
+" />
+
+
+<link rel="canonical" href="http://localhost:1313/posts/%E7%99%BD%E9%A9%AC/" />
+
+
+<meta property="og:url" content="http://localhost:1313/posts/%E7%99%BD%E9%A9%AC/">
+  <meta property="og:site_name" content="DoanThanhDat">
+  <meta property="og:title" content="白马">
+  <meta property="og:description" content="如果你深深爱着的人，却深深的爱上了别人，有什么法子？">
+  <meta property="og:locale" content="vn_VN">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2018-02-22T21:19:51+08:00">
+    <meta property="article:modified_time" content="2018-02-22T21:19:51+08:00">
+    <meta property="article:tag" content="金庸">
+    <meta property="og:image" content="http://localhost:1313/posts/%E7%99%BD%E9%A9%AC/%E7%99%BD%E9%A9%AC.jpg">
+
+
+
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="http://localhost:1313/posts/%E7%99%BD%E9%A9%AC/%E7%99%BD%E9%A9%AC.jpg">
+  <meta name="twitter:title" content="白马">
+  <meta name="twitter:description" content="如果你深深爱着的人，却深深的爱上了别人，有什么法子？">
+
+
+
+<meta name="generator" content="Hugo 0.127.0">
+
+<link rel="stylesheet" href="/css/output.css" />
+
+<style>
+
+
+
+</style>
+
+
+    
+
+
+<link rel="stylesheet" data-custom-syntax-highlighting />
+<style>
+  .chroma {
+    padding: 1em;
+    background-color: var(--dream-pre-bg, #f5f5f5);
+    border-radius: .5em;
+    overflow: auto;
+  }
+
+  html.dark .chroma {
+    background-color: var(--dream-pre-bg-dark, #262626);
+  }
+</style>
+
+
+
+
+
+
+    
+    <link rel="stylesheet" href="/css/custom.css" />
+    
+
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+  </head>
+
+  <body x-data="{
+    flip: false,
+  }">
+    
+    <div id="dream-global-bg"></div>
+
+    
+<nav x-data="{ isSticky: false }"
+  x-init="window.addEventListener('scroll', () => { isSticky = window.scrollY > 30 })"
+  class="sticky top-0 z-30 mt-4 lg:mt-8 py-4"
+  :class="{ 'bg-base-100 shadow-lg dark:border-b dark:border-base-content/30': isSticky }">
+
+  <div class="container flex justify-between px-4">
+    <section class="flex items-center gap-4">
+      <div class="avatar cursor-pointer hover:online" @click="flip = !flip" title="">
+        <div class="h-10 rounded-full">
+          <img src="/me/me.png" alt="Đoàn Thành Đạt" />
+        </div>
+      </div>
+
+      
+      <div>
+        
+        <a href="http://localhost:1313/" class="text-lg font-semibold cursor-pointer">
+          Đoàn Thành Đạt
+        </a>
+        
+        
+        <div class="text-base-content/60 text-sm">Unity Game Developer</div>
+        
+      </div>
+      
+    </section>
+
+    <div class="dropdown dropdown-end sm:hidden">
+      <div tabindex="0" role="button" class="btn btn-ghost btn-square" aria-label="Select an option">
+        <ion-icon name="menu" class="text-2xl"></ion-icon>
+      </div>
+      <ul class="dropdown-content menu w-36 bg-base-100 rounded-box z-[1] shadow-md">
+        
+
+
+<li>
+  <div role="link" tabindex="0" class="inline-flex items-center p-2 cursor-pointer" @click="flip = !flip" title="">
+    <ion-icon name="information-circle"></ion-icon></div>
+</li>
+
+
+
+
+
+
+
+
+
+<li>
+  <a class="group inline-flex items-center p-2 cursor-pointer" href="/search" title="">
+    <ion-icon name="search"></ion-icon>
+    
+  </a>
+</li>
+
+
+
+
+
+
+
+<li>
+  <a class="inline-flex items-center p-2 cursor-pointer" href="https://github.com/datthanhdoan" target="_blank" title="GitHub">
+    
+    <ion-icon name="logo-github"></ion-icon>
+    
+    GitHub
+  </a>
+</li>
+
+
+
+
+
+<li>
+  <a class="inline-flex items-center p-2 cursor-pointer" href="/posts" title="">
+    <ion-icon name="archive"></ion-icon>
+    
+  </a>
+</li>
+
+
+
+
+<li>
+  <a class="inline-flex items-center p-2 cursor-pointer" href="/categories" title="">
+    <ion-icon name="grid"></ion-icon>
+    
+  </a>
+</li>
+
+
+
+
+<li>
+  <a class="inline-flex items-center p-2 cursor-pointer" href="/tags" title="">
+    <ion-icon name="pricetags"></ion-icon>
+    
+  </a>
+</li>
+
+
+
+
+<li>
+  <a class="inline-flex items-center p-2 cursor-pointer" href="/index.xml" title="RSS">
+    <ion-icon name="logo-rss"></ion-icon>
+    RSS
+  </a>
+</li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </ul>
+    </div>
+    <section class="hidden sm:flex sm:items-center sm:gap-2 md:gap-4">
+      
+      
+      
+      <div role="link" tabindex="0" class="text-sm font-semibold cursor-pointer hover:underline" @click="flip = !flip" title=""></div>
+      
+      
+
+      
+      
+      
+      
+
+      
+
+      
+      
+      
+      
+<a class="group inline-flex items-center p-2 rounded-full cursor-pointer hover:bg-primary" href="/search" title="">
+  <ion-icon class="group-hover:text-primary-content" name="search"></ion-icon>
+</a>
+
+
+      
+      
+
+
+
+  
+  <a class="group inline-flex items-center p-2 rounded-full cursor-pointer hover:bg-primary" href="https://github.com/datthanhdoan" target="_blank" title="GitHub">
+    <ion-icon class="group-hover:text-primary-content" name="logo-github"></ion-icon>
+  </a>
+  
+
+
+
+      
+
+      <div class="dropdown dropdown-end dropdown-hover">
+        <div tabindex="0" role="button" class="group inline-flex items-center p-2 rounded-full cursor-pointer hover:bg-primary" aria-label="Select an option">
+          <ion-icon class="group-hover:text-primary-content text-xl" name="menu"></ion-icon>
+        </div>
+        <ul class="dropdown-content menu w-36 bg-base-100 rounded-box z-[1] shadow-xl">
+          
+          
+<li>
+  <a class="inline-flex items-center p-2 cursor-pointer" href="/posts" title="">
+    <ion-icon name="archive"></ion-icon>
+    
+  </a>
+</li>
+
+
+          
+          
+<li>
+  <a class="inline-flex items-center p-2 cursor-pointer" href="/categories" title="">
+    <ion-icon name="grid"></ion-icon>
+    
+  </a>
+</li>
+
+
+          
+          
+<li>
+  <a class="inline-flex items-center p-2 cursor-pointer" href="/tags" title="">
+    <ion-icon name="pricetags"></ion-icon>
+    
+  </a>
+</li>
+
+
+          
+          
+<li>
+  <a class="inline-flex items-center p-2 cursor-pointer" href="/index.xml" title="RSS">
+    <ion-icon name="logo-rss"></ion-icon>
+    RSS
+  </a>
+</li>
+
+
+          
+
+          
+          
+
+
+
+
+
+
+
+
+
+
+          
+        </ul>
+      </div>
+      
+    </section>
+  </div>
+</nav>
+
+
+    <div class="flip-container" :class="{ 'flip-it': flip }">
+      <div class="flipper">
+        <div class="front">
+          <div class="container">
+            
+<div class="mt-4 px-4">
+  
+  <div class="relative" x-data="{ height: '' }" x-init="height = $el.scrollHeight + 'px'">
+  
+    
+    <div class="absolute right-0 lg:w-36 xl:w-48 hidden lg:block" :style="{ height }">
+      <nav id="TableOfContents"></nav>
+    </div>
+    
+    <article class="mx-auto prose dark:prose-invert" id="dream-single-post-main">
+      <header>
+        <h1>白马</h1>
+        <p class="text-sm">
+          
+            <span data-format="luxon">2018-02-22T21:19:51&#43;08:00</span>
+          
+
+          | <span>2</span>
+
+          
+          | <span>
+            
+              <span data-format="luxon">2018-02-22T21:19:51&#43;08:00</span>
+            </span>
+          
+        </p>
+        <div class="flex justify-between">
+          <div class="flex items-center">
+  
+  <div class="avatar mr-1">
+    <div class="w-8 rounded-full">
+      <img class="my-0" src="/me/yy.jpg" alt="g1eny0ung" />
+    </div>
+  </div>
+  
+
+  <span>
+  
+    
+      g1eny0ung
+    
+  
+  </span>
+</div>
+
+
+          <span class="flex items-center gap-2">
+  <a class="group inline-flex items-center p-2 text-sm rounded-full cursor-pointer hover:bg-primary" href="https://twitter.com/intent/tweet?text=%e7%99%bd%e9%a9%ac&url=http%3a%2f%2flocalhost%3a1313%2fposts%2f%25E7%2599%25BD%25E9%25A9%25AC%2f" title="Share on X">
+    <ion-icon class="group-hover:text-primary-content" name="logo-x"></ion-icon>
+  </a>
+  <a class="group inline-flex items-center p-2 rounded-full cursor-pointer hover:bg-primary" href="https://facebook.com/sharer/sharer.php?u=http%3a%2f%2flocalhost%3a1313%2fposts%2f%25E7%2599%25BD%25E9%25A9%25AC%2f" title="Share on Facebook">
+    <ion-icon class="group-hover:text-primary-content" name="logo-facebook"></ion-icon>
+  </a>
+</span>
+
+        </div>
+      </header>
+
+      
+      <img src="%e7%99%bd%e9%a9%ac.jpg" alt="白马" />
+      
+
+      <p>如果你深深爱着的人，却深深的爱上了别人，有什么法子？</p>
+<blockquote>
+<p>白马带着她一步步的回到中原。白马已经老了，只能慢慢的走，但终是能回到中原的。</p>
+<p>江南有杨柳、桃花，有燕子、金鱼&hellip;汉人中有的是英俊勇武的少年，倜傥潇洒的少年&hellip;</p>
+<p>但这个美丽的姑娘就像古高昌国人那样固执：“那都是很好很好的，可是我偏不喜欢。”</p>
+</blockquote>
+<p>每当目光达到全文完的时候，不禁把书再翻到前一页，再次体会一次结尾。去年在动车上第二次读完白马啸西风，第一次已然是 5，6 年前。</p>
+<p>今天打开 Kindle，又点进去了它，忍不住去记录一下。</p>
+<p>同时，这几天在人物的公众号上，是 EDGE 网站的年度问题专栏，有什么问题能够让人们引起更深的触动呢，偶遇白马，我就想到了那句话，
+是的，<strong>如果你深深爱着的人，却深深的爱上了别人，有什么法子？</strong></p>
+<p>当阿秀问出那句话的时候，＂如果那个小姑娘很是想念你，日日夜夜的盼望你去陪她，因此坟上真的裂开了一条大缝，你肯跳进坟去，永远陪着她么？＂</p>
+<p>我的内心也为之一动，我期盼的自然是我要永远陪伴她。但是这只是美好的愿景，苏普早就已经表达了自己的感情。</p>
+<p>天铃鸟的歌声响起，阿秀的心，我的心，一股凄凉意，可怜一往情。</p>
+<p>或许就像白马一样，当阿秀老去的时候，才能解答出这个问题吧。</p>
+<p>其实我更希望没人能够解答出这个问题，事实也是这样的，有些问题是没有答案的。</p>
+<p>我所希冀的也不过是我的，也应该是阿秀的愿望罢了。</p>
+<p>我也想到了程灵素，在这个问题上，她或许已经作出了解答。</p>
+<p><strong>“小妹子对情郎——恩情深，</strong></p>
+<p><strong>你莫负了妹子——一段情，</strong></p>
+<p><strong>你见了她面时——要待她好，</strong></p>
+<p><strong>你不见她面时——天天要十七八遍挂在心！</strong></p>
+<p><strong>王铁匠那首情歌，似乎又在耳边缠绕，“我要待她好，可是……可是……她已经死了。她活着的时候，我没待她好，我天天十七八遍挂在心上的，是另一个姑娘。</strong></p>
+<p>人生总有一些没有答案的问题，会带着自己的喜怒哀乐，一同逝去。</p>
+<p>但是在过程中，我们终会固执的不由自主，无法自拔的深陷其中，可是这又有什么法子呢？</p>
+
+      
+      <div class="divider"></div>
+      <div class="flex flex-col md:flex-row justify-between gap-4 py-4">
+        
+        <a class="group btn btn-outline" href="/posts/%E7%A6%85%E4%BF%AE-%E7%9F%A5%E8%A1%8C%E5%90%88%E4%B8%80/" title="禅修一">
+          <ion-icon name="chevron-back"></ion-icon>
+          <div class="inline-flex flex-col items-start">
+            <span class="text-base-content/60 group-hover:text-neutral-content/60 text-xs font-normal"></span>
+            <span class="max-w-48 truncate">禅修一</span>
+          </div>
+        </a>
+        
+
+        
+        <div></div>
+        
+      </div>
+      
+    </article>
+  </div>
+
+  
+
+  
+  <div class="divider max-w-[65ch] mx-auto"></div>
+  
+
+  <section class="max-w-[65ch] mx-auto space-y-4">
+    
+
+    
+    <template x-if="['localhost', '127.0.0.1'].indexOf(window.location.hostname) == -1">
+      <article>
+        <script
+          src="https://utteranc.es/client.js"
+          repo="datthanhdoan/datthanhdoan.github.io"
+          issue-term="og:title"
+          theme="github-light"
+          crossorigin="anonymous"
+          async>
+        </script>
+      </article>
+    </template>
+    
+
+    
+  </section>
+</div>
+
+
+            <footer class="flex justify-between items-center gap-2 px-4 py-12">
+              <div>
+  
+  <p>
+    © 2024 DoanThanhDat
+  </p>
+  
+
+  
+  <p class="text-sm">
+    🌱
+    <span class="text-base-content/60">
+      Powered by <a class="hover:underline" href="https://gohugo.io/" target="_blank">Hugo</a> with theme
+      <a class="hover:underline" href="https://github.com/g1eny0ung/hugo-theme-dream" target="_blank">Dream</a>.</span
+    >
+  </p>
+  
+</div>
+
+              <div
+  x-data="{ icons: [
+    { name: 'moon', status: 'y' },
+    { name: 'sunny', status: 'n' },
+    { name: 'desktop', status: 'auto' }
+  ] }"
+  class="flex items-center h-[32px] px-2 gap-2 border border-base-300 rounded-full"
+>
+  <template x-for="icon in icons">
+    <div
+      role="button"
+      tabindex="0"
+      :aria-label="'Select ' + icon.name + ' mode'"
+      class="group inline-flex justify-center items-center p-1 rounded-full cursor-pointer hover:bg-primary"
+      :class="$store.darkMode.icon() === icon.name && 'bg-primary'"
+      @click="$store.darkMode.toggle(icon.status)"
+    >
+      <ion-icon
+        :name="`${icon.name}-outline`"
+        class="group-hover:text-primary-content"
+        :class="$store.darkMode.icon() === icon.name && 'text-primary-content'"
+      >
+      </ion-icon>
+    </div>
+  </template>
+</div>
+
+            </footer>
+          </div>
+        </div>
+        <div class="back">
+          <div class="container">
+            <div class="dream-grid">
+  
+  
+  
+  <div class="w-full md:w-1/2 lg:w-1/3 xl:w-1/4 p-4 dream-column">
+    <article
+      class="card card-compact bg-base-100 hover:bg-base-content/10 shadow-xl dark:border dark:border-base-content/30"
+    >
+      <div class="card-body">
+        <div class="card-title">Giới thiệu</div>
+
+        <div class="prose dark:prose-invert">
+          <p><strong>Xin chào 👋, mình là Đạt!</strong></p>
+<p>Mình là một game developer tự học, hiện đang làm phó chủ nhiệm của câu lạc bộ phát triển game trường Đại học Phenikaa. Đây là portfolio của mình, nơi mình showcase một số dự án mà mình đã tham gia và những kiến thức mà mình đã học được.</p>
+<pre tabindex="0"><code></code></pre>
+        </div>
+      </div>
+    </article>
+  </div>
+  
+  <div class="w-full md:w-1/2 lg:w-1/3 xl:w-1/4 p-4 dream-column">
+    <article
+      class="card card-compact bg-base-100 hover:bg-base-content/10 shadow-xl dark:border dark:border-base-content/30"
+    >
+      <div class="card-body">
+        <div class="card-title">Học Vấn</div>
+
+        <div class="prose dark:prose-invert">
+          <p>🎓<strong>Đại học Phenikaa</strong></br>
+Công nghệ thông tin</p>
+
+        </div>
+      </div>
+    </article>
+  </div>
+  
+  
+
+  
+  <div class="w-full md:w-1/2 lg:w-1/3 xl:w-1/4 p-4 dream-column">
+    <article
+      class="card card-compact bg-base-100 hover:bg-base-content/10 shadow-xl dark:border dark:border-base-content/30"
+    >
+      <div class="card-body">
+        <div class="card-title"></div>
+
+        <ul class="menu menu-horizontal flex-wrap w-full [&_ion-icon]:text-lg">
+  
+  <li>
+    <a href="mailto:datthanhdoan.charlie@gmail.com" title="Email">
+      <ion-icon name="mail"></ion-icon>
+    </a>
+  </li>
+  
+
+  
+  <li>
+    <a href="https://github.com/datthanhdoan" target="_blank" title="GitHub">
+      <ion-icon name="logo-github"></ion-icon>
+    </a>
+  </li>
+  
+</ul>
+
+      </div>
+    </article>
+  </div>
+  
+
+  
+  
+</div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+  window.lightTheme = "emerald"
+  window.darkTheme = "forest"
+
+  window.hasTwitterEmbed =  null 
+  if (window.hasTwitterEmbed) {
+    
+    window.twttr = (function (d, s, id) {
+      var js,
+        fjs = d.getElementsByTagName(s)[0],
+        t = window.twttr || {}
+      if (d.getElementById(id)) return t
+      js = d.createElement(s)
+      js.id = id
+      js.src = 'https://platform.twitter.com/widgets.js'
+      fjs.parentNode.insertBefore(js, fjs)
+
+      t._e = []
+      t.ready = function (f) {
+        t._e.push(f)
+      }
+
+      return t
+    })(document, 'script', 'twitter-wjs')
+  }
+</script>
+<script src="https://cdn.jsdelivr.net/npm/imagesloaded@5.0.0/imagesloaded.pkgd.min.js" integrity="sha256-htrLFfZJ6v5udOG+3kNLINIKh2gvoKqwEhHYfTTMICc=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha256-Nn1q/fx0H7SNLZMQ5Hw5JLaTRZp0yILA/FRexe19VdI=" crossorigin="anonymous"></script>
+<script src="/js/grid.js"></script>
+<script src="/js/main.js"></script>
+
+    
+
+
+<script
+  src="https://cdn.jsdelivr.net/npm/luxon@1.26.0"
+  integrity="sha256-4sbTzmCCW9LGrIh5OsN8V5Pfdad1F1MwhLAOyXKnsE0="
+  crossorigin="anonymous"
+></script>
+<script>
+  format()
+
+  function format() {
+    document.querySelectorAll('span[data-format="luxon"]').forEach(el => {
+      const date = el.textContent
+
+      el.textContent = luxon.DateTime.fromISO(date, { locale: "vn" }).toFormat("dd/MM/yyyy, cccc")
+    })
+  }
+</script>
+
+
+
+<script>
+  window.customSyntaxHighlighting = {
+    light: "/css/syntax-light.min.css",
+    dark: "/css/syntax-dark.min.css"
+  }
+
+  document.addEventListener('alpine:initialized', () => {
+    var isDark = Alpine.store('darkMode').isDark()
+    var customSyntaxHighlightingUrl = isDark ? window.customSyntaxHighlighting.dark : window.customSyntaxHighlighting.light
+
+    document
+      .querySelector('link[data-custom-syntax-highlighting]')
+      .setAttribute('href', customSyntaxHighlightingUrl)
+  })
+</script>
+
+
+
+
+    
+
+    
+
+    <script type="module" src="https://unpkg.com/ionicons@7.4.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.4.0/dist/ionicons/ionicons.js"></script>
+  </body>
+</html>
