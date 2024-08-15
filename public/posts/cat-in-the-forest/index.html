@@ -3,49 +3,49 @@
   x-data
   :class="$store.darkMode.class()"
   :data-theme="$store.darkMode.theme()">
-  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <head><script src="/portfolio/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=portfolio/livereload" data-no-instant defer></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cat In The Forest | DoanThanhDat</title>
 
     
-<link href="/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+<link href="/portfolio/favicon.ico" rel="shortcut icon" type="image/x-icon" />
 
 
 
 
 <meta name="author" content="Doan Thanh Dat" />
-<meta name="description" content="Giới thiệu Cat In The Forest là một game simulator về cuộc sống của một chú mèo nông dân. Trong game, người chơi sẽ được trải nghiệm cuộc sống của một chú mèo nông dân thông qua việc chăm sóc cây trồng, thu hoạch, mở rộng trang trại, chăm sóc động vật, và nhiều hoạt động khác. Thông tin game Đây là game mình design và code. Các design pattern được sử dụng trong game: Singleton, Observer, State." />
+<meta name="description" content="Genre: Simulation, Casual " />
 
 
-<link rel="canonical" href="http://localhost:1313/posts/cat-in-the-forest/" />
+<link rel="canonical" href="http://localhost:1313/portfolio/posts/cat-in-the-forest/" />
 
 
-<meta property="og:url" content="http://localhost:1313/posts/cat-in-the-forest/">
+<meta property="og:url" content="http://localhost:1313/portfolio/posts/cat-in-the-forest/">
   <meta property="og:site_name" content="DoanThanhDat">
   <meta property="og:title" content="Cat In The Forest">
-  <meta property="og:description" content="Giới thiệu Cat In The Forest là một game simulator về cuộc sống của một chú mèo nông dân. Trong game, người chơi sẽ được trải nghiệm cuộc sống của một chú mèo nông dân thông qua việc chăm sóc cây trồng, thu hoạch, mở rộng trang trại, chăm sóc động vật, và nhiều hoạt động khác. Thông tin game Đây là game mình design và code. Các design pattern được sử dụng trong game: Singleton, Observer, State.">
+  <meta property="og:description" content="Genre: Simulation, Casual ">
   <meta property="og:locale" content="vn_VN">
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
     <meta property="article:published_time" content="2024-08-15T03:33:15+07:00">
     <meta property="article:modified_time" content="2024-08-15T04:07:58+07:00">
     <meta property="article:tag" content="Indie-Game">
-    <meta property="og:image" content="http://localhost:1313/me/background.jpg">
+    <meta property="og:image" content="http://localhost:1313/portfolio/me/background.jpg">
 
 
 
 
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:image" content="http://localhost:1313/me/background.jpg">
+  <meta name="twitter:image" content="http://localhost:1313/portfolio/me/background.jpg">
   <meta name="twitter:title" content="Cat In The Forest">
-  <meta name="twitter:description" content="Giới thiệu Cat In The Forest là một game simulator về cuộc sống của một chú mèo nông dân. Trong game, người chơi sẽ được trải nghiệm cuộc sống của một chú mèo nông dân thông qua việc chăm sóc cây trồng, thu hoạch, mở rộng trang trại, chăm sóc động vật, và nhiều hoạt động khác. Thông tin game Đây là game mình design và code. Các design pattern được sử dụng trong game: Singleton, Observer, State.">
+  <meta name="twitter:description" content="Genre: Simulation, Casual ">
 
 
 
 <meta name="generator" content="Hugo 0.127.0">
 
-<link rel="stylesheet" href="/css/output.css" />
+<link rel="stylesheet" href="/portfolio/css/output.css" />
 
 <style>
 
@@ -77,7 +77,7 @@
 
 
     
-    <link rel="stylesheet" href="/css/custom.css" />
+    <link rel="stylesheet" href="/portfolio/css/custom.css" />
     
 
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
@@ -99,14 +99,14 @@
     <section class="flex items-center gap-4">
       <div class="avatar cursor-pointer hover:online" @click="flip = !flip" title="">
         <div class="h-10 rounded-full">
-          <img src="/me/me.png" alt="Đoàn Thành Đạt" />
+          <img src="/portfolio/me/me.png" alt="Đoàn Thành Đạt" />
         </div>
       </div>
 
       
       <div>
         
-        <a href="http://localhost:1313/" class="text-lg font-semibold cursor-pointer">
+        <a href="http://localhost:1313/portfolio/" class="text-lg font-semibold cursor-pointer">
           Đoàn Thành Đạt
         </a>
         
@@ -139,7 +139,7 @@
 
 
 <li>
-  <a class="group inline-flex items-center p-2 cursor-pointer" href="/search" title="">
+  <a class="group inline-flex items-center p-2 cursor-pointer" href="/portfolio/search" title="">
     <ion-icon name="search"></ion-icon>
     
   </a>
@@ -165,7 +165,7 @@
 
 
 <li>
-  <a class="inline-flex items-center p-2 cursor-pointer" href="/posts" title="">
+  <a class="inline-flex items-center p-2 cursor-pointer" href="/portfolio/posts" title="">
     <ion-icon name="archive"></ion-icon>
     
   </a>
@@ -175,7 +175,7 @@
 
 
 <li>
-  <a class="inline-flex items-center p-2 cursor-pointer" href="/categories" title="">
+  <a class="inline-flex items-center p-2 cursor-pointer" href="/portfolio/categories" title="">
     <ion-icon name="grid"></ion-icon>
     
   </a>
@@ -185,7 +185,7 @@
 
 
 <li>
-  <a class="inline-flex items-center p-2 cursor-pointer" href="/tags" title="">
+  <a class="inline-flex items-center p-2 cursor-pointer" href="/portfolio/tags" title="">
     <ion-icon name="pricetags"></ion-icon>
     
   </a>
@@ -195,7 +195,7 @@
 
 
 <li>
-  <a class="inline-flex items-center p-2 cursor-pointer" href="/index.xml" title="RSS">
+  <a class="inline-flex items-center p-2 cursor-pointer" href="/portfolio/index.xml" title="RSS">
     <ion-icon name="logo-rss"></ion-icon>
     RSS
   </a>
@@ -239,7 +239,7 @@
       
       
       
-<a class="group inline-flex items-center p-2 rounded-full cursor-pointer hover:bg-primary" href="/search" title="">
+<a class="group inline-flex items-center p-2 rounded-full cursor-pointer hover:bg-primary" href="/portfolio/search" title="">
   <ion-icon class="group-hover:text-primary-content" name="search"></ion-icon>
 </a>
 
@@ -267,7 +267,7 @@
           
           
 <li>
-  <a class="inline-flex items-center p-2 cursor-pointer" href="/posts" title="">
+  <a class="inline-flex items-center p-2 cursor-pointer" href="/portfolio/posts" title="">
     <ion-icon name="archive"></ion-icon>
     
   </a>
@@ -277,7 +277,7 @@
           
           
 <li>
-  <a class="inline-flex items-center p-2 cursor-pointer" href="/categories" title="">
+  <a class="inline-flex items-center p-2 cursor-pointer" href="/portfolio/categories" title="">
     <ion-icon name="grid"></ion-icon>
     
   </a>
@@ -287,7 +287,7 @@
           
           
 <li>
-  <a class="inline-flex items-center p-2 cursor-pointer" href="/tags" title="">
+  <a class="inline-flex items-center p-2 cursor-pointer" href="/portfolio/tags" title="">
     <ion-icon name="pricetags"></ion-icon>
     
   </a>
@@ -297,7 +297,7 @@
           
           
 <li>
-  <a class="inline-flex items-center p-2 cursor-pointer" href="/index.xml" title="RSS">
+  <a class="inline-flex items-center p-2 cursor-pointer" href="/portfolio/index.xml" title="RSS">
     <ion-icon name="logo-rss"></ion-icon>
     RSS
   </a>
@@ -342,8 +342,7 @@
   <ul>
     <li>
       <ul>
-        <li><a href="#giới-thiệu">Giới thiệu</a></li>
-        <li><a href="#thông-tin-game">Thông tin game</a></li>
+        <li><a href="#chi-tiết-dự-án">Chi tiết Dự án</a></li>
       </ul>
     </li>
   </ul>
@@ -379,10 +378,10 @@
 
 
           <span class="flex items-center gap-2">
-  <a class="group inline-flex items-center p-2 text-sm rounded-full cursor-pointer hover:bg-primary" href="https://twitter.com/intent/tweet?text=Cat%20In%20The%20Forest&url=http%3a%2f%2flocalhost%3a1313%2fposts%2fcat-in-the-forest%2f" title="Share on X">
+  <a class="group inline-flex items-center p-2 text-sm rounded-full cursor-pointer hover:bg-primary" href="https://twitter.com/intent/tweet?text=Cat%20In%20The%20Forest&url=http%3a%2f%2flocalhost%3a1313%2fportfolio%2fposts%2fcat-in-the-forest%2f" title="Share on X">
     <ion-icon class="group-hover:text-primary-content" name="logo-x"></ion-icon>
   </a>
-  <a class="group inline-flex items-center p-2 rounded-full cursor-pointer hover:bg-primary" href="https://facebook.com/sharer/sharer.php?u=http%3a%2f%2flocalhost%3a1313%2fposts%2fcat-in-the-forest%2f" title="Share on Facebook">
+  <a class="group inline-flex items-center p-2 rounded-full cursor-pointer hover:bg-primary" href="https://facebook.com/sharer/sharer.php?u=http%3a%2f%2flocalhost%3a1313%2fportfolio%2fposts%2fcat-in-the-forest%2f" title="Share on Facebook">
     <ion-icon class="group-hover:text-primary-content" name="logo-facebook"></ion-icon>
   </a>
 </span>
@@ -394,15 +393,13 @@
       <img src="cat-in-the-forest.png" alt="Cat In The Forest" />
       
 
-      <h3 id="giới-thiệu">Giới thiệu</h3>
-<p><strong>Cat In The Forest</strong> là một game simulator về cuộc sống của một chú mèo nông dân.
-Trong game, người chơi sẽ được trải nghiệm cuộc sống của một chú mèo nông dân thông qua việc chăm sóc cây trồng, thu hoạch, mở rộng trang trại, chăm sóc động vật, và nhiều hoạt động khác. </br></p>
-<h3 id="thông-tin-game">Thông tin game</h3>
-<p>Đây là game mình design và code. Các <strong>design pattern</strong> được sử dụng trong game: <strong>Singleton, Observer, State</strong>.Mình cũng sử dụng OOP cho game và mình làm game này đầu năm 2024 lúc đó mình mới bắt đầu học <strong>SOLID</strong> và cũng có áp dụng được 1 chút ( mình có áp dụng cơ bản <strong>SRP, OCP, ISP</strong>) . Để tìm đường đi ngắn nhất mình sử dụng <strong>navMesh</strong>. Các animation trong game được mình tạo ra bằng cách sử dụng <strong>DoTween</strong>. <strong>Dữ liệu</strong> được lưu trữ tại &lsquo;persistentDataPath&rsquo; (thư mục dữ liệu trên máy người chơi) và sử dụng <strong>JsonUtility</strong>. Dữ liệu của trò chơi, bao gồm thông tin về nhiệm vụ, được lưu dưới dạng <strong>JSON</strong> để thuận tiện cho việc cập nhật mà không cần sửa đổi mã nguồn. </br></p>
+      <p>Genre: Simulation, Casual </br></p>
+<h3 id="chi-tiết-dự-án">Chi tiết Dự án</h3>
+<p><strong>Cat In The Forest</strong> là dự án mà tôi đã tự thiết kế và lập trình. Trong quá trình phát triển, tôi đã áp dụng các <strong>design pattern</strong> chính như <strong>Singleton</strong>, <strong>Observer</strong>, và <strong>State</strong>. Tôi cũng sử dụng lập trình hướng đối tượng (OOP) và tích hợp các nguyên tắc <strong>SOLID</strong>, bao gồm <strong>SRP (Single Responsibility Principle)</strong>, <strong>OCP (Open/Closed Principle)</strong>, và <strong>ISP (Interface Segregation Principle)</strong>.</p>
+<p>Để quản lý đường đi và các hành vi của nhân vật, tôi đã sử dụng <strong>navMesh</strong>. Các animation trong trò chơi được tạo ra bằng <strong>DoTween</strong>, giúp cải thiện hiệu suất và chất lượng chuyển động. Dữ liệu trò chơi, bao gồm các thông tin về nhiệm vụ và trạng thái, được lưu trữ tại <strong>persistentDataPath</strong> (thư mục dữ liệu trên máy người chơi) và quản lý dưới định dạng <strong>JSON</strong> thông qua <strong>JsonUtility</strong>, cho phép cập nhật dữ liệu một cách linh hoạt mà không cần thay đổi mã nguồn.</p>
 <p>Video Gameplay:
-<a href="https://img.youtube.com/vi/1Q2J3Q1J7ZM/0.jpg">Cat In The Forest</a>
+<a href="https://youtu.be/UwWd7r4fbKk">Cat In The Forest</a><br/>
 Link download: <a href="https://github.com/datthanhdoan/Cat-In-The-Forest/releases">Windows 🪟</a></p>
-
 
       
       <div class="divider"></div>
@@ -412,7 +409,13 @@ Link download: <a href="https://github.com/datthanhdoan/Cat-In-The-Forest/releas
         
 
         
-        <div></div>
+        <a class="group btn btn-outline" href="/portfolio/posts/conquer-christmas-day/" title="Conquer Christmas Day">
+          <div class="inline-flex flex-col items-end">
+            <span class="text-base-content/60 group-hover:text-neutral-content/60 text-xs font-normal"></span>
+            <span class="max-w-48 truncate">Conquer Christmas Day</span>
+          </div>
+          <ion-icon name="chevron-forward"></ion-icon>
+        </a>
         
       </div>
       
@@ -605,8 +608,8 @@ Công nghệ thông tin</p>
 </script>
 <script src="https://cdn.jsdelivr.net/npm/imagesloaded@5.0.0/imagesloaded.pkgd.min.js" integrity="sha256-htrLFfZJ6v5udOG+3kNLINIKh2gvoKqwEhHYfTTMICc=" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha256-Nn1q/fx0H7SNLZMQ5Hw5JLaTRZp0yILA/FRexe19VdI=" crossorigin="anonymous"></script>
-<script src="/js/grid.js"></script>
-<script src="/js/main.js"></script>
+<script src="/portfolio/js/grid.js"></script>
+<script src="/portfolio/js/main.js"></script>
 
     
 
@@ -632,8 +635,8 @@ Công nghệ thông tin</p>
 
 <script>
   window.customSyntaxHighlighting = {
-    light: "/css/syntax-light.min.css",
-    dark: "/css/syntax-dark.min.css"
+    light: "/portfolio/css/syntax-light.min.css",
+    dark: "/portfolio/css/syntax-dark.min.css"
   }
 
   document.addEventListener('alpine:initialized', () => {

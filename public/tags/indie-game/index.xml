@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Indie-Game on DoanThanhDat</title>
-    <link>http://localhost:1313/tags/indie-game/</link>
+    <link>http://localhost:1313/portfolio/tags/indie-game/</link>
     <description>Recent content in Indie-Game on DoanThanhDat</description>
     <generator>Hugo</generator>
     <language>vn-VN</language>
     <lastBuildDate>Thu, 15 Aug 2024 04:07:58 +0700</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/indie-game/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/portfolio/tags/indie-game/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Cat In The Forest</title>
-      <link>http://localhost:1313/posts/cat-in-the-forest/</link>
+      <link>http://localhost:1313/portfolio/posts/cat-in-the-forest/</link>
       <pubDate>Thu, 15 Aug 2024 03:33:15 +0700</pubDate>
-      <guid>http://localhost:1313/posts/cat-in-the-forest/</guid>
-      <description>Giới thiệu Cat In The Forest là một game simulator về cuộc sống của một chú mèo nông dân. Trong game, người chơi sẽ được trải nghiệm cuộc sống của một chú mèo nông dân thông qua việc chăm sóc cây trồng, thu hoạch, mở rộng trang trại, chăm sóc động vật, và nhiều hoạt động khác. Thông tin game Đây là game mình design và code. Các design pattern được sử dụng trong game: Singleton, Observer, State.</description>
+      <guid>http://localhost:1313/portfolio/posts/cat-in-the-forest/</guid>
+      <description>&lt;p&gt;Genre: Simulation, Casual &lt;/br&gt;&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

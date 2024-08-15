@@ -2,17 +2,31 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Lưu trữ on DoanThanhDat</title>
-    <link>http://localhost:1313/posts/</link>
+    <link>http://localhost:1313/portfolio/posts/</link>
     <description>Recent content in Lưu trữ on DoanThanhDat</description>
     <generator>Hugo</generator>
     <language>vn-VN</language>
-    <atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/portfolio/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Cat In The Forest</title>
-      <link>http://localhost:1313/posts/cat-in-the-forest/</link>
+      <link>http://localhost:1313/portfolio/posts/cat-in-the-forest/</link>
       <pubDate>Thu, 15 Aug 2024 03:33:15 +0700</pubDate>
-      <guid>http://localhost:1313/posts/cat-in-the-forest/</guid>
-      <description>Giới thiệu Cat In The Forest là một game simulator về cuộc sống của một chú mèo nông dân. Trong game, người chơi sẽ được trải nghiệm cuộc sống của một chú mèo nông dân thông qua việc chăm sóc cây trồng, thu hoạch, mở rộng trang trại, chăm sóc động vật, và nhiều hoạt động khác. Thông tin game Đây là game mình design và code. Các design pattern được sử dụng trong game: Singleton, Observer, State.</description>
+      <guid>http://localhost:1313/portfolio/posts/cat-in-the-forest/</guid>
+      <description>&lt;p&gt;Genre: Simulation, Casual &lt;/br&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Conquer Christmas Day</title>
+      <link>http://localhost:1313/portfolio/posts/conquer-christmas-day/</link>
+      <pubDate>Thu, 15 Aug 2024 03:33:15 +0700</pubDate>
+      <guid>http://localhost:1313/portfolio/posts/conquer-christmas-day/</guid>
+      <description>&lt;p&gt;Gerne: Simulation, Casual&lt;/br&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Tag Tag Boom</title>
+      <link>http://localhost:1313/portfolio/posts/tag-tag-boom/</link>
+      <pubDate>Thu, 15 Aug 2024 03:33:15 +0700</pubDate>
+      <guid>http://localhost:1313/portfolio/posts/tag-tag-boom/</guid>
+      <description>&lt;p&gt;Gerne: Action, Casual, Platformer&lt;/br&gt;&#xA;Global Game Jam 2024&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

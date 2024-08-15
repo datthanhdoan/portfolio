@@ -14,14 +14,16 @@ tags:
   - indie-game
 nolastmod: true
 ---
-### Giới thiệu
-**Cat In The Forest** là một game simulator về cuộc sống của một chú mèo nông dân.
-Trong game, người chơi sẽ được trải nghiệm cuộc sống của một chú mèo nông dân thông qua việc chăm sóc cây trồng, thu hoạch, mở rộng trang trại, chăm sóc động vật, và nhiều hoạt động khác. </br>
+Genre: Simulation, Casual </br> 
+<!--more-->
 
-### Thông tin game
-Đây là game mình design và code. Các **design pattern** được sử dụng trong game: **Singleton, Observer, State**.Mình cũng sử dụng OOP cho game và mình làm game này đầu năm 2024 lúc đó mình mới bắt đầu học **SOLID** và cũng có áp dụng được 1 chút ( mình có áp dụng cơ bản **SRP, OCP, ISP**) . Để tìm đường đi ngắn nhất mình sử dụng **navMesh**. Các animation trong game được mình tạo ra bằng cách sử dụng **DoTween**. **Dữ liệu** được lưu trữ tại 'persistentDataPath' (thư mục dữ liệu trên máy người chơi) và sử dụng **JsonUtility**. Dữ liệu của trò chơi, bao gồm thông tin về nhiệm vụ, được lưu dưới dạng **JSON** để thuận tiện cho việc cập nhật mà không cần sửa đổi mã nguồn. </br> 
+### Chi tiết Dự án
+
+**Cat In The Forest** là dự án mà tôi đã tự thiết kế và lập trình. Trong quá trình phát triển, tôi đã áp dụng các **design pattern** chính như **Singleton**, **Observer**, và **State**. Tôi cũng sử dụng lập trình hướng đối tượng (OOP) và tích hợp các nguyên tắc **SOLID**, bao gồm **SRP (Single Responsibility Principle)**, **OCP (Open/Closed Principle)**, và **ISP (Interface Segregation Principle)**.
+
+Để quản lý đường đi và các hành vi của nhân vật, tôi đã sử dụng **navMesh**. Các animation trong trò chơi được tạo ra bằng **DoTween**, giúp cải thiện hiệu suất và chất lượng chuyển động. Dữ liệu trò chơi, bao gồm các thông tin về nhiệm vụ và trạng thái, được lưu trữ tại **persistentDataPath** (thư mục dữ liệu trên máy người chơi) và quản lý dưới định dạng **JSON** thông qua **JsonUtility**, cho phép cập nhật dữ liệu một cách linh hoạt mà không cần thay đổi mã nguồn.
 
 Video Gameplay:
-[Cat In The Forest](https://img.youtube.com/vi/1Q2J3Q1J7ZM/0.jpg)
+[Cat In The Forest](https://youtu.be/UwWd7r4fbKk)<br/>
 Link download: [Windows 🪟](https://github.com/datthanhdoan/Cat-In-The-Forest/releases)
 

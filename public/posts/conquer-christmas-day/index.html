@@ -6,7 +6,7 @@
   <head><script src="/portfolio/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=portfolio/livereload" data-no-instant defer></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> | DoanThanhDat</title>
+    <title>Conquer Christmas Day | DoanThanhDat</title>
 
     
 <link href="/portfolio/favicon.ico" rel="shortcut icon" type="image/x-icon" />
@@ -14,18 +14,24 @@
 
 
 
-<meta name="author" content="datthanhdoan" />
-<meta name="description" content="" />
+<meta name="author" content="Doan Thanh Dat" />
+<meta name="description" content="Gerne: Simulation, Casual
+" />
 
 
-<link rel="canonical" href="http://localhost:1313/portfolio/search/" />
+<link rel="canonical" href="http://localhost:1313/portfolio/posts/conquer-christmas-day/" />
 
 
-<meta property="og:url" content="http://localhost:1313/portfolio/search/">
+<meta property="og:url" content="http://localhost:1313/portfolio/posts/conquer-christmas-day/">
   <meta property="og:site_name" content="DoanThanhDat">
-  <meta property="og:title" content="DoanThanhDat">
+  <meta property="og:title" content="Conquer Christmas Day">
+  <meta property="og:description" content="Gerne: Simulation, Casual">
   <meta property="og:locale" content="vn_VN">
-  <meta property="og:type" content="website">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2024-08-15T03:33:15+07:00">
+    <meta property="article:modified_time" content="2024-08-15T03:33:15+07:00">
+    <meta property="article:tag" content="Global-Game-Jam">
     <meta property="og:image" content="http://localhost:1313/portfolio/me/background.jpg">
 
 
@@ -33,7 +39,8 @@
 
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:image" content="http://localhost:1313/portfolio/me/background.jpg">
-  <meta name="twitter:title" content="DoanThanhDat">
+  <meta name="twitter:title" content="Conquer Christmas Day">
+  <meta name="twitter:description" content="Gerne: Simulation, Casual">
 
 
 
@@ -48,7 +55,27 @@
 </style>
 
 
-     
+    
+
+
+<link rel="stylesheet" data-custom-syntax-highlighting />
+<style>
+  .chroma {
+    padding: 1em;
+    background-color: var(--dream-pre-bg, #f5f5f5);
+    border-radius: .5em;
+    overflow: auto;
+  }
+
+  html.dark .chroma {
+    background-color: var(--dream-pre-bg-dark, #262626);
+  }
+</style>
+
+
+
+
+
 
     
     <link rel="stylesheet" href="/portfolio/css/custom.css" />
@@ -306,57 +333,126 @@
         <div class="front">
           <div class="container">
             
+<div class="mt-4 px-4">
+  
+  <div class="relative" x-data="{ height: '' }" x-init="height = $el.scrollHeight + 'px'">
+  
+    
+    <div class="absolute right-0 lg:w-36 xl:w-48 hidden lg:block" :style="{ height }">
+      <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#chi-tiết-dự-án">Chi tiết Dự án</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+    </div>
+    
+    <article class="mx-auto prose dark:prose-invert" id="dream-single-post-main">
+      <header>
+        <h1>Conquer Christmas Day</h1>
+        <p class="text-sm">
+          
+            <span data-format="luxon">2024-08-15T03:33:15&#43;07:00</span>
+          
 
-<div class="mt-8 lg:mt-12 px-4" x-data="{
-  search: '',
-  get posts() { return this.search !== '' ? window.fuse.search(this.search) : [] },
-}">
-  <label class="input input-bordered flex items-center gap-2">
-    <input type="text" class="grow" placeholder="" x-model.debounce="search" />
-    <ion-icon name="search"></ion-icon>
-  </label>
+          | <span>1</span>
 
-  <div class="mt-8 space-y-4">
-  <template x-for="post in posts">
-    <a class="card card-compact bg-base-100 hover:bg-base-content/10 cursor-pointer border border-base-content/30" :href="post.item.url">
-      <div class="card-body">
-        <h2 class="card-title" x-text="post.item.title"></h2>
-
-        <div x-html="post.item.description"></div>
-
-        <div class="card-actions justify-between items-center mt-4">
+          
+        </p>
+        <div class="flex justify-between">
           <div class="flex items-center">
-            <template x-if="post.item.avatar">
-            <div class="avatar mr-1">
-              <div class="w-8 rounded-full">
-                <img class="my-0" :src="post.item.avatar" :alt="post.item.author" />
-              </div>
-            </div>
-            </template>
-            <template x-if="!post.item.avatar">
-            <span>@</span>
-            </template>
+  
+  <span>@</span>
+  
 
-            <template x-if="post.item.author">
-            <span x-text="post.item.author"></span>
-            </template>
-            <template x-if="!post.item.author">
-            <span x-text="datthanhdoan"></span>
-            </template>
-            </span>
-          </div>
-
-          <div class="inline-flex items-center">
-            <ion-icon name="time" class="mr-1"></ion-icon>
-            <span><span x-text="post.item.readingTime"></span></span>
-          </div>
-        </div>
-      </div>
-    </a>
-  </template>
-  </div>
+  <span>
+  
+    
+      <a href="https://github.com/datthanhdoan" target="_blank">Doan Thanh Dat</a>
+    
+  
+  </span>
 </div>
 
+
+          <span class="flex items-center gap-2">
+  <a class="group inline-flex items-center p-2 text-sm rounded-full cursor-pointer hover:bg-primary" href="https://twitter.com/intent/tweet?text=Conquer%20Christmas%20Day&url=http%3a%2f%2flocalhost%3a1313%2fportfolio%2fposts%2fconquer-christmas-day%2f" title="Share on X">
+    <ion-icon class="group-hover:text-primary-content" name="logo-x"></ion-icon>
+  </a>
+  <a class="group inline-flex items-center p-2 rounded-full cursor-pointer hover:bg-primary" href="https://facebook.com/sharer/sharer.php?u=http%3a%2f%2flocalhost%3a1313%2fportfolio%2fposts%2fconquer-christmas-day%2f" title="Share on Facebook">
+    <ion-icon class="group-hover:text-primary-content" name="logo-facebook"></ion-icon>
+  </a>
+</span>
+
+        </div>
+      </header>
+
+      
+      <img src="conquer-christmas-day.png" alt="Conquer Christmas Day" />
+      
+
+      <p>Gerne: Simulation, Casual</br></p>
+<h3 id="chi-tiết-dự-án">Chi tiết Dự án</h3>
+<p><strong>Conquer Christmas Day</strong> là dự án mà đã làm trước giáng sinh năm 2023 - khi mình mới bắt đầu học lập trình game. Game sử dụng Object Pooling để tái sử dụng các nhân vật, và Singleton. Để di chuyển các nhân vật &ldquo;em bé đến nhận quà&rdquo; mình đã mô phỏng queue di chuyển theo các waypoints mình đã tạo sẵn.</p>
+<p>Itch.io: <a href="https://datthanhdoan.itch.io/conquer-christmas-day">Conquer Christmas Day</a> 🎅🎄🎁</p>
+
+      
+      <div class="divider"></div>
+      <div class="flex flex-col md:flex-row justify-between gap-4 py-4">
+        
+        <a class="group btn btn-outline" href="/portfolio/posts/cat-in-the-forest/" title="Cat In The Forest">
+          <ion-icon name="chevron-back"></ion-icon>
+          <div class="inline-flex flex-col items-start">
+            <span class="text-base-content/60 group-hover:text-neutral-content/60 text-xs font-normal"></span>
+            <span class="max-w-48 truncate">Cat In The Forest</span>
+          </div>
+        </a>
+        
+
+        
+        <a class="group btn btn-outline" href="/portfolio/posts/tag-tag-boom/" title="Tag Tag Boom">
+          <div class="inline-flex flex-col items-end">
+            <span class="text-base-content/60 group-hover:text-neutral-content/60 text-xs font-normal"></span>
+            <span class="max-w-48 truncate">Tag Tag Boom</span>
+          </div>
+          <ion-icon name="chevron-forward"></ion-icon>
+        </a>
+        
+      </div>
+      
+    </article>
+  </div>
+
+  
+
+  
+  <div class="divider max-w-[65ch] mx-auto"></div>
+  
+
+  <section class="max-w-[65ch] mx-auto space-y-4">
+    
+
+    
+    <template x-if="['localhost', '127.0.0.1'].indexOf(window.location.hostname) == -1">
+      <article>
+        <script
+          src="https://utteranc.es/client.js"
+          repo="datthanhdoan/datthanhdoan.github.io"
+          issue-term="og:title"
+          theme="github-light"
+          crossorigin="anonymous"
+          async>
+        </script>
+      </article>
+    </template>
+    
+
+    
+  </section>
+</div>
 
 
             <footer class="flex justify-between items-center gap-2 px-4 py-12">
@@ -522,25 +618,41 @@ Công nghệ thông tin</p>
     
 
 
-
-
-
-
-
-
-
-
-<script src="https://cdn.jsdelivr.net/npm/fuse.js@7.0.0"></script>
+<script
+  src="https://cdn.jsdelivr.net/npm/luxon@1.26.0"
+  integrity="sha256-4sbTzmCCW9LGrIh5OsN8V5Pfdad1F1MwhLAOyXKnsE0="
+  crossorigin="anonymous"
+></script>
 <script>
-  var fuseData = [{"author":"Doan Thanh Dat","avatar":null,"categories":["game development"],"description":"\u003cp\u003eGenre: Simulation, Casual \u003c/br\u003e\u003c/p\u003e","readingTime":1,"tags":["indie-game"],"title":"Cat In The Forest","url":"/portfolio/posts/cat-in-the-forest/"},{"author":"Doan Thanh Dat","avatar":null,"categories":["game development"],"description":"\u003cp\u003eGerne: Simulation, Casual\u003c/br\u003e\u003c/p\u003e","readingTime":1,"tags":["global-game-jam"],"title":"Conquer Christmas Day","url":"/portfolio/posts/conquer-christmas-day/"},{"author":"Doan Thanh Dat","avatar":null,"categories":["game development"],"description":"\u003cp\u003eGerne: Action, Casual, Platformer\u003c/br\u003e\nGlobal Game Jam 2024\u003c/p\u003e","readingTime":1,"tags":["global-game-jam"],"title":"Tag Tag Boom","url":"/portfolio/posts/tag-tag-boom/"}];
-  var fuseOptions = {
-    keys: [
-      "title",
-    ]
-  };
+  format()
 
-  var fuse = new Fuse(fuseData, fuseOptions);
+  function format() {
+    document.querySelectorAll('span[data-format="luxon"]').forEach(el => {
+      const date = el.textContent
+
+      el.textContent = luxon.DateTime.fromISO(date, { locale: "vn" }).toFormat("dd/MM/yyyy, cccc")
+    })
+  }
 </script>
+
+
+
+<script>
+  window.customSyntaxHighlighting = {
+    light: "/portfolio/css/syntax-light.min.css",
+    dark: "/portfolio/css/syntax-dark.min.css"
+  }
+
+  document.addEventListener('alpine:initialized', () => {
+    var isDark = Alpine.store('darkMode').isDark()
+    var customSyntaxHighlightingUrl = isDark ? window.customSyntaxHighlighting.dark : window.customSyntaxHighlighting.light
+
+    document
+      .querySelector('link[data-custom-syntax-highlighting]')
+      .setAttribute('href', customSyntaxHighlightingUrl)
+  })
+</script>
+
 
 
 
